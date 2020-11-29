@@ -17,6 +17,7 @@
 				<th>Destination Place</th>
 				<th>Price</th>
 				<th>Date</th>
+				<th>Number of Person</th>
 			</tr>
 			<c:forEach var="bookDetail" items="${bookingDetail}">
 				<tr>
@@ -25,6 +26,7 @@
 					<td>${bookDetail.flight.destinationPlace.placeName }</td>
 					<td>${bookDetail.flight.price }</td>
 					<td>${bookDetail.flight.arrivalDate }</td>
+					<td>${bookDetail.noOfPerson }</td>
 				</tr>
 			</c:forEach>
 		</table>
