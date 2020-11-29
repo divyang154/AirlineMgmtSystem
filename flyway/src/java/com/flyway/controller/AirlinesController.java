@@ -36,7 +36,7 @@ public class AirlinesController extends HttpServlet {
 		} else {
 			try {
 				
-				PrintWriter printWriter = response.getWriter();
+//				PrintWriter printWriter = response.getWriter();
 				String airlinesName = request.getParameter("airlinesName");
 				ValidatorFactory validatorFactory = Validation.buildDefaultValidatorFactory();
 				Validator validator = validatorFactory.getValidator();
@@ -54,7 +54,7 @@ public class AirlinesController extends HttpServlet {
 
 				} else {
 					airlinesService.createAirlinesService(airlinesName);
-					printWriter.println("Airlines Name");
+//					printWriter.println("Airlines Name");
 				}
 				List<Airlines> listAirlines = airlinesService.getAllAirlines();
 				request.setAttribute("listAir", listAirlines);
