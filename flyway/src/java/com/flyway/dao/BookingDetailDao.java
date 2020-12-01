@@ -36,7 +36,6 @@ public class BookingDetailDao {
 		List<BookingDetail> list = null;
 		if (user != null) {
 
-		}
 		try {
 			session = HibernateUtil.getSession();
 			session.beginTransaction();
@@ -53,8 +52,9 @@ public class BookingDetailDao {
 		} finally {
 			HibernateUtil.closeSession(session);
 		}
+		}
 		return list;
-
+		
 	}
 
 }

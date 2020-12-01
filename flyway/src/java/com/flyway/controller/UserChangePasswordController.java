@@ -37,7 +37,7 @@ public class UserChangePasswordController extends HttpServlet {
 			error = "New Password is blank";
 			request.setAttribute("error", error);
 			request.getRequestDispatcher("ChangePassword.jsp").forward(request, response);
-		} else if (!user.getPassword().equals(oldPassword)) {
+		} else if (user!=null && !user.getPassword().equals(oldPassword)) {
 			error = "Old Password is in incorrect";
 			request.setAttribute("error", error);
 			request.getRequestDispatcher("ChangePassword.jsp").forward(request, response);
@@ -48,7 +48,9 @@ public class UserChangePasswordController extends HttpServlet {
 		} else {
 
 			if (newPassword.equals(reNewPassword)) {
+				if(user!=null) {
 				userService.updateUser(user.getUserId(),user.getUsername(), reNewPassword, user.getUserEmail(), user.getUserRole());
+				}
 				request.getRequestDispatcher("login.jsp").forward(request, response);
 			} else {
 				error = "New Password and reNewPassword do not match.Please check";

@@ -33,7 +33,9 @@ public class PlaceServices {
 	}
 	
 	public void updatePlaces(Places place,User user) {
+		if(user!=null) {
 		place.setUpdatedBy(user.getUserId());
+		}
 		place.setUpdatedOn(new Date());
 		placesDao.updatePlace(place);
 	}

@@ -135,7 +135,7 @@ public class SourceDestinationPlaceController extends HttpServlet {
 	}
 	
 	protected void doDelete(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+			throws ServletException, IOException {	
 		PrintWriter printWriter = response.getWriter();
 		String requestURL = request.getQueryString();
 		String splitargs[] = requestURL.split("=");

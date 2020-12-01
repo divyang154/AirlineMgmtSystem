@@ -34,8 +34,10 @@ public class FlightService {
 		flight.setPrice(price);
 		flight.setArrivalDate(arrivalDate);
 		flight.setAirlines(airlines);
+		if(user!=null) {
 		flight.setCreatedBy(user.getUserId());
 		flight.setUpdatedBy(user.getUserId());
+		}
 		flight.setUpdatedOn(new Date());
 		flight.setCreatedOn(new Date());
 		flightDao.createFlight(flight);
@@ -61,7 +63,9 @@ public class FlightService {
 		flight.setDestinationPlace(destination);
 		flight.setSourcePlace(source);
 		flight.setPrice(price);
+		if(user!=null) {
 		flight.setUpdatedBy(user.getUserId());
+		}
 		flight.setUpdatedOn(new Date());
 		flight.setArrivalDate(arrivalDate);
 		flight.setAirlines(airlies);
