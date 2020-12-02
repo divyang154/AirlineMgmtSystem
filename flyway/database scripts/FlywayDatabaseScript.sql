@@ -76,5 +76,8 @@ CREATE TABLE `bookingdetail_tb` (
   CONSTRAINT `source_key` FOREIGN KEY (`destinationPlaceId`) REFERENCES `place_tb` (`placeid`)
 ) ENGINE=InnoDB AUTO_INCREMENT=49 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 INSERT INTO `user_tb` (`userId`,`username`,`password`,`userEmail`,`createdBy`,`updatedBy`,`createdOn`,`updatedOn`,`userRole`) VALUES (1,'flyadmin','flyadmin@12345','flyadmin123@gmail.com',1,'1',now(),now(),'Administrator');
+INSERT INTO `place_tb` (`placeId`,`placeName`,`createdBy`,`createdOn`,`updatedBy`,`updatedOn`) VALUES (2,'Mumbai',NULL,now(),NULL,now());
+INSERT INTO `place_tb` (`placeId`,`placeName`,`createdBy`,`createdOn`,`updatedBy`,`updatedOn`) VALUES (3,'Nagpur',NULL,now(),NULL,now());
+INSERT INTO `airline_tb` (`airlineId`,`name`,`createdOn`,`updatedOn`,`createdBy`,`updatedBy`) VALUES (1,'Indigo',now(),now(),1,1);
 
 
