@@ -30,6 +30,7 @@ public class UserService {
 		user.setUserEmail(email);
 		user.setCreatedOn(new Date());
 		user.setUpdatedOn(new Date());
+		user.setUserRole(role);
 		userDao.create(user);
 		return user;
 	}
